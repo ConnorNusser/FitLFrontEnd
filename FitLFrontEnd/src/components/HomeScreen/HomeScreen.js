@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './HomeScreen.styl';
 
 const HomeScreen = () => (
   <div className="HomeScreen">

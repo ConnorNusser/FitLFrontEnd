@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "./src/components/HomeScreen/HomeScreen";
@@ -27,8 +27,20 @@ export default function App() {
   return (
       <NavigationContainer>
       <BottomTab.Navigator>
-        <BottomTab.Screen name = "Home Screen" component={HomeScreen} />
-        <BottomTab.Screen name = "Settings Screen" component={SettingsScreen} />
+        <BottomTab.Screen right = "Hi" name = "Home Screen" component={HomeScreen} />
+        <BottomTab.Screen
+            name="Settings Screen"
+            component={SettingsScreen}
+            options={({ navigation }) => ({
+              title: "Settings Screen",
+              headerRight: () => (
+                <Button
+                  onPress={() => navigation.navigate("SettingsScreen")}
+                  title="+"
+                />
+              )
+            })}
+          />
       </BottomTab.Navigator>
       </NavigationContainer>
   );

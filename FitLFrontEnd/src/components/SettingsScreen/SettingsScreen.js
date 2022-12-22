@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-SettingsScreen.propTypes = {};
-SettingsScreen.defaultProps = {};
 
-export default function SettingsScreen(){
-  return(
-    <div className="SettingsScreen">
-    SettingScreen Component
-  </div>
-  )
-};
+
+export default function SettingsScreen({props}) {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}

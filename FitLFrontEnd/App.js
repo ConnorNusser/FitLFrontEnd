@@ -5,12 +5,30 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen} from "./src/components/HomeScreen/HomeScreen";
 import { SettingsScreen } from "./src/components/SettingsScreen/SettingsScreen";
 const BottomTab = createBottomTabNavigator();
+/*
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+*/
+
 export default function App() {
   return (
       <NavigationContainer>
       <BottomTab.Navigator>
-        <BottomTab.Screen name="Home" component={HomeScreen} />
-        <BottomTab.Screen name="Settings" component={SettingsScreen} />
+        <BottomTab.Screen name = "HomeScreen" component={HomeScreen} />
+        <BottomTab.Screen name = "SettingsScreen" component={SettingsScreen} />
       </BottomTab.Navigator>
     </NavigationContainer>
   );

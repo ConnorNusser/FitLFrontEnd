@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "./src/components/HomeScreen/HomeScreen";
-import SettingsScreen from "./src/components/SettingsScreen/SettingsScreen";
+import WorkoutScreen from "./src/components/Workout/WorkoutScreen";
 import { Button as MaterialButton} from '@react-native-material/core';
 const BottomTab = createBottomTabNavigator();
 /*
@@ -31,7 +31,7 @@ export default function App() {
         <BottomTab.Screen name = "Home Screen" component={HomeScreen} />
         <BottomTab.Screen
             name="Workouts"
-            component={SettingsScreen}
+            component={WorkoutScreen}
             options={({ navigation }) => ({
               title: "Workouts",
               headerRight: () => (

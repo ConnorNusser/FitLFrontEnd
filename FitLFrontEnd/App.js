@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "./src/components/HomeScreen/HomeScreen";
 import SettingsScreen from "./src/components/SettingsScreen/SettingsScreen";
+import { Button as MaterialButton} from '@react-native-material/core';
 const BottomTab = createBottomTabNavigator();
 /*
 function HomeScreen() {
@@ -34,9 +35,9 @@ export default function App() {
             options={({ navigation }) => ({
               title: "Settings Screen",
               headerRight: () => (
-                <Button
+                <MaterialButton
+                  title = "+"
                   onPress={() => navigation.navigate("SettingsScreen")}
-                  title="+"
                 />
               )
             })}

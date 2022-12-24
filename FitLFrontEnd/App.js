@@ -28,16 +28,16 @@ export default function App() {
   return (
       <NavigationContainer>
       <BottomTab.Navigator>
-        <BottomTab.Screen right = "Hi" name = "Home Screen" component={HomeScreen} />
+        <BottomTab.Screen name = "Home Screen" component={HomeScreen} />
         <BottomTab.Screen
-            name="Settings Screen"
+            name="Workouts"
             component={SettingsScreen}
             options={({ navigation }) => ({
-              title: "Settings Screen",
+              title: "Workouts",
               headerRight: () => (
                 <MaterialButton
                   title = "+"
-                  onPress={() => navigation.navigate("SettingsScreen")}
+                  onPress={() => alert("You Tapped Me!")}
                 />
               )
             })}

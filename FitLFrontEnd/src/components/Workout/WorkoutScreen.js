@@ -5,30 +5,33 @@ export default function WorkoutScreen(props) {
   let v = props.value;
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ProductTable products={v} />
       <Text>Settings!</Text>
+      <ProductTable v={v} />
     </View>
   );
 
-  function ProductTable({ products }) {
+  function ProductCategoryRow({ category }) {
+    return (
+          <View><Text>{category}</Text></View>
+    );
+  }
+
+  function ProductTable(products) {
+    if (products <= 0) {
+      products = 1;
+    }
     const rows = [];
     let lastCategory = null;
   
-    for (let i = 0; i < products; i++) {
-      rows.push(i);
+    for (let i = 0; i < 25; i++) {
+      rows.push(<ProductCategoryRow category = {i} />);
       
     };
-  
+    console.log(rows.length);
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <View>
+      <Text>Hello</Text>
+      </View>
     );
   }
 }
